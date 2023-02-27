@@ -11,12 +11,20 @@ import Starscream
 
 class PriceViewController: UIViewController {
     
-    
     // IB Outlet
     @IBOutlet weak var coinCollectionView: UICollectionView!
+    @IBOutlet var currencyOutletCollection: [UIButton]!
     
     // Property
-    var dogeCoin: DogeCoin = DogeCoin()
+    var socket: WebSocket!
+    var isConnected = false
+    let server = WebSocketServer()
+    let USDtoKRWCurrency: Double = 1318.60
+    var dogeCoinPrice: [String: String] = ["KRW": "105.05",
+                                           "ETH": "0.00005050",
+                                           "USD": "0.08120",
+                                           "BTC": "0.0000035"]
+    var currencyButtonStatus = false
     
     // Life Cycle
     override func viewDidLoad() {
@@ -25,31 +33,36 @@ class PriceViewController: UIViewController {
         self.coinCollectionView.dataSource = self
         self.coinCollectionView.delegate = self
         openWebSocket()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
-            print("executed")
-            self.requestPrice()
-        })
-        
+        currencyOutletCollection.forEach{ $0.addTarget(self, action: #selector(currencyButtonOutletCollectionTapped(_:)), for: .touchUpInside)}
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     // Method
     func openWebSocket() {
         let urlString = "wss://ws.dogechain.info/inv"
-        WebSocket.shared.url = URL(string: urlString)
-        try? WebSocket.shared.openWebSocket()
-        WebSocket.shared.delegate = self
-    }
-    func requestPrice() {
-        let message = "op"
-        //let message = "{\"op\":\"price_sub\"}"
-        WebSocket.shared.send(message: message)
-        WebSocket.shared.receive(onReceive: { (string, data) in
-            print("success")
-            print("(string, data): (\(String(describing: string)), \(String(describing: data))")
-        })
-        
+        guard let url = URL(string: urlString) else { return }
+        var request = URLRequest(url: url)
+        request.timeoutInterval = 5
+        socket = WebSocket(request: request)
+        socket.delegate = self
+        socket.connect()
     }
     
+    func requestPrice() {
+        let message = "{\"op\":\"price_sub\"}"
+        socket.write(string: message)
+        print(socket.write(string: message))
+    }
+    
+    
+    // IB Action
+    @objc func currencyButtonOutletCollectionTapped(_ sender: UIButton) {
+        currencyOutletCollection.forEach{ $0.isSelected = $0.isTouchInside ? true : false}
+        coinCollectionView.reloadData()
+    }
 }
 
 extension PriceViewController {

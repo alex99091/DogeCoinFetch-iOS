@@ -32,25 +32,31 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDd-VX-hzi" userLabel="CurrencyStackView">
-                                <rect key="frame" x="10" y="168" width="184.5" height="31"/>
+                                <rect key="frame" x="10" y="168" width="222" height="31"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJc-rq-8on">
-                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="KRW" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJc-rq-8on">
+                                        <rect key="frame" x="0.0" y="0.0" width="55.5" height="31"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="KRW"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yxz-W7-ONv">
-                                        <rect key="frame" x="61.5" y="0.0" width="61.5" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="BTC" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yxz-W7-ONv">
+                                        <rect key="frame" x="55.5" y="0.0" width="55.5" height="31"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="BTC"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2c-Gr-ItB">
-                                        <rect key="frame" x="123" y="0.0" width="61.5" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="USD" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2c-Gr-ItB">
+                                        <rect key="frame" x="111" y="0.0" width="55.5" height="31"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="USDT"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="USD"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="ETH" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAp-1B-JbT">
+                                        <rect key="frame" x="166.5" y="0.0" width="55.5" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="ETH"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -131,6 +137,10 @@
                     </view>
                     <connections>
                         <outlet property="coinCollectionView" destination="bfq-FV-cdt" id="dEr-ji-cNP"/>
+                        <outletCollection property="currencyOutletCollection" destination="VJc-rq-8on" collectionClass="NSMutableArray" id="Vp1-zv-630"/>
+                        <outletCollection property="currencyOutletCollection" destination="Yxz-W7-ONv" collectionClass="NSMutableArray" id="EJE-BZ-5bo"/>
+                        <outletCollection property="currencyOutletCollection" destination="M2c-Gr-ItB" collectionClass="NSMutableArray" id="hmD-pQ-I5f"/>
+                        <outletCollection property="currencyOutletCollection" destination="IAp-1B-JbT" collectionClass="NSMutableArray" id="Hq6-eo-gfZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -15,9 +15,6 @@ class CoinCell: UICollectionViewCell {
     @IBOutlet weak var coinPriceLabel: UILabel!
     @IBOutlet weak var coinChangeLabel: UILabel!
     
-    // Property
-    static let reuseIdentifier = String(describing: CoinCell.self)
-
     // Life Cycle
     override class func awakeFromNib() {
         super.awakeFromNib()

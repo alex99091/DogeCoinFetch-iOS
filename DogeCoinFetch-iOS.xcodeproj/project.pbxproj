@@ -14,9 +14,10 @@
 		266E011D29AC7FC200901FDA /* CoinHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E011C29AC7FC200901FDA /* CoinHeaderView.swift */; };
 		267C4CBB29AC8D9500A2CA1A /* CoinCollectionView+Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C4CBA29AC8D9500A2CA1A /* CoinCollectionView+Datasource.swift */; };
 		267C4CBD29AC8DA100A2CA1A /* CoinCollectionView+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C4CBC29AC8DA100A2CA1A /* CoinCollectionView+Delegate.swift */; };
-		267C4CC729ACBE0900A2CA1A /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C4CC629ACBE0900A2CA1A /* WebSocket.swift */; };
-		267C4CC929ACBE9B00A2CA1A /* PriceViewController+WebSocketDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C4CC829ACBE9B00A2CA1A /* PriceViewController+WebSocketDelegate.swift */; };
 		267C4CCB29ACC11800A2CA1A /* DogeCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C4CCA29ACC11800A2CA1A /* DogeCoin.swift */; };
+		267C4CD129ACEDF400A2CA1A /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 267C4CD029ACEDF400A2CA1A /* Starscream */; };
+		267C4CD329ACFD7A00A2CA1A /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C4CD229ACFD7A00A2CA1A /* DataResponse.swift */; };
+		267C4CD529AD04CE00A2CA1A /* PriceViewController+WebSocketDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C4CD429AD04CE00A2CA1A /* PriceViewController+WebSocketDelegate.swift */; };
 		26BD794129AC42FC00F705F3 /* DogeCoinFetch_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BD794029AC42FC00F705F3 /* DogeCoinFetch_iOSApp.swift */; };
 		26BD794329AC42FC00F705F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BD794229AC42FC00F705F3 /* ContentView.swift */; };
 		26BD794529AC42FE00F705F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26BD794429AC42FE00F705F3 /* Assets.xcassets */; };
@@ -34,9 +35,9 @@
 		266E011C29AC7FC200901FDA /* CoinHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinHeaderView.swift; sourceTree = "<group>"; };
 		267C4CBA29AC8D9500A2CA1A /* CoinCollectionView+Datasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoinCollectionView+Datasource.swift"; sourceTree = "<group>"; };
 		267C4CBC29AC8DA100A2CA1A /* CoinCollectionView+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoinCollectionView+Delegate.swift"; sourceTree = "<group>"; };
-		267C4CC629ACBE0900A2CA1A /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
-		267C4CC829ACBE9B00A2CA1A /* PriceViewController+WebSocketDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PriceViewController+WebSocketDelegate.swift"; sourceTree = "<group>"; };
 		267C4CCA29ACC11800A2CA1A /* DogeCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogeCoin.swift; sourceTree = "<group>"; };
+		267C4CD229ACFD7A00A2CA1A /* DataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
+		267C4CD429AD04CE00A2CA1A /* PriceViewController+WebSocketDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PriceViewController+WebSocketDelegate.swift"; sourceTree = "<group>"; };
 		26BD793D29AC42FC00F705F3 /* DogeCoinFetch-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DogeCoinFetch-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BD794029AC42FC00F705F3 /* DogeCoinFetch_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogeCoinFetch_iOSApp.swift; sourceTree = "<group>"; };
 		26BD794229AC42FC00F705F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				267C4CD129ACEDF400A2CA1A /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +68,7 @@
 				266E011829AC66C900901FDA /* UICollectionViewCell+ReuseIdentifiable.swift */,
 				267C4CBA29AC8D9500A2CA1A /* CoinCollectionView+Datasource.swift */,
 				267C4CBC29AC8DA100A2CA1A /* CoinCollectionView+Delegate.swift */,
-				267C4CC829ACBE9B00A2CA1A /* PriceViewController+WebSocketDelegate.swift */,
+				267C4CD429AD04CE00A2CA1A /* PriceViewController+WebSocketDelegate.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -74,8 +76,8 @@
 		267C4CBE29AC8E0300A2CA1A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				267C4CC629ACBE0900A2CA1A /* WebSocket.swift */,
 				267C4CCA29ACC11800A2CA1A /* DogeCoin.swift */,
+				267C4CD229ACFD7A00A2CA1A /* DataResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,6 +149,7 @@
 			);
 			name = "DogeCoinFetch-iOS";
 			packageProductDependencies = (
+				267C4CD029ACEDF400A2CA1A /* Starscream */,
 			);
 			productName = "DogeCoinFetch-iOS";
 			productReference = 26BD793D29AC42FC00F705F3 /* DogeCoinFetch-iOS.app */;
@@ -177,6 +180,7 @@
 			);
 			mainGroup = 26BD793429AC42FC00F705F3;
 			packageReferences = (
+				267C4CCF29ACEDF400A2CA1A /* XCRemoteSwiftPackageReference "Starscream" */,
 			);
 			productRefGroup = 26BD793E29AC42FC00F705F3 /* Products */;
 			projectDirPath = "";
@@ -207,17 +211,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				26BD794329AC42FC00F705F3 /* ContentView.swift in Sources */,
-				267C4CC929ACBE9B00A2CA1A /* PriceViewController+WebSocketDelegate.swift in Sources */,
 				267C4CCB29ACC11800A2CA1A /* DogeCoin.swift in Sources */,
 				267C4CBD29AC8DA100A2CA1A /* CoinCollectionView+Delegate.swift in Sources */,
 				266E011929AC66C900901FDA /* UICollectionViewCell+ReuseIdentifiable.swift in Sources */,
-				267C4CC729ACBE0900A2CA1A /* WebSocket.swift in Sources */,
 				26BD794129AC42FC00F705F3 /* DogeCoinFetch_iOSApp.swift in Sources */,
 				26BD795729AC623F00F705F3 /* CoinCell.swift in Sources */,
 				266E011D29AC7FC200901FDA /* CoinHeaderView.swift in Sources */,
+				267C4CD529AD04CE00A2CA1A /* PriceViewController+WebSocketDelegate.swift in Sources */,
 				266E011529AC666700901FDA /* UIViewController+Storyboarded.swift in Sources */,
 				266E011729AC66A000901FDA /* UICollectionViewCell+Nibbed.swift in Sources */,
 				26BD795229AC462B00F705F3 /* PriceViewController.swift in Sources */,
+				267C4CD329ACFD7A00A2CA1A /* DataResponse.swift in Sources */,
 				267C4CBB29AC8D9500A2CA1A /* CoinCollectionView+Datasource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +423,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		267C4CCF29ACEDF400A2CA1A /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		267C4CD029ACEDF400A2CA1A /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 267C4CCF29ACEDF400A2CA1A /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 26BD793529AC42FC00F705F3 /* Project object */;
 }

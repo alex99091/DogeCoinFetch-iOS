@@ -8,6 +8,15 @@
 import Foundation
 
 struct DogeCoin: Codable {
-    var op: String?
-    var msg: String?
+    var type: String?
+    var value: String?
+    var exchangeName: String?
+    var priceBase: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case type = "type"
+        case value = "value"
+        case exchangeName = "exchange_name"
+        case priceBase = "price_base"
+    }
 }
