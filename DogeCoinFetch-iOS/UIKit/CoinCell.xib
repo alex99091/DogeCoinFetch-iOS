@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CoinCell" id="4yB-6f-L4W" customClass="CoinCell" customModule="DogeCoinFetch_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KVO-Lo-Chi">
+                <rect key="frame" x="0.0" y="0.0" width="377" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="beP-TQ-Ko9" userLabel="CoinRowStackView">
+                        <rect key="frame" x="5" y="0.0" width="367" height="86"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dNT-zy-pTT" userLabel="CoinInfoStackView">
+                                <rect key="frame" x="0.0" y="23.5" width="122.5" height="39"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="도지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaG-7l-SHg">
+                                        <rect key="frame" x="0.0" y="0.0" width="28" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="0.20000000000000001" green="0.1137254902" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOGE / KRW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnv-bc-ZNr">
+                                        <rect key="frame" x="0.0" y="19.5" width="61" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="0.20000000000000001" green="0.1137254902" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mnv-bc-ZNr" firstAttribute="height" secondItem="LaG-7l-SHg" secondAttribute="height" id="zZU-ak-P95"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="234.56" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubd-v1-Leb">
+                                <rect key="frame" x="122.5" y="34" width="122" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <color key="highlightedColor" systemColor="systemRedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.23%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gn-2x-E2a">
+                                <rect key="frame" x="244.5" y="34" width="122.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <color key="highlightedColor" systemColor="systemRedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="0gn-2x-E2a" firstAttribute="width" secondItem="dNT-zy-pTT" secondAttribute="width" id="R85-tR-iSB"/>
+                            <constraint firstItem="Ubd-v1-Leb" firstAttribute="width" secondItem="dNT-zy-pTT" secondAttribute="width" id="wwg-E2-p7Y"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="beP-TQ-Ko9" secondAttribute="bottom" id="Hsv-aw-cQJ"/>
+                    <constraint firstAttribute="trailing" secondItem="beP-TQ-Ko9" secondAttribute="trailing" constant="5" id="T0m-Mi-v9R"/>
+                    <constraint firstItem="beP-TQ-Ko9" firstAttribute="top" secondItem="KVO-Lo-Chi" secondAttribute="top" id="eVI-2d-rNw"/>
+                    <constraint firstItem="beP-TQ-Ko9" firstAttribute="leading" secondItem="KVO-Lo-Chi" secondAttribute="leading" constant="5" id="iyS-Tr-95r"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="377" height="86"/>
+            <connections>
+                <outlet property="coinChangeLabel" destination="0gn-2x-E2a" id="EBR-2S-4dT"/>
+                <outlet property="coinNameLabel" destination="LaG-7l-SHg" id="5Ly-GR-Wnj"/>
+                <outlet property="coinPriceLabel" destination="Ubd-v1-Leb" id="sgV-gW-cuJ"/>
+                <outlet property="coinSymbolLabel" destination="mnv-bc-ZNr" id="2uq-J3-Zod"/>
+            </connections>
+            <point key="canvasLocation" x="-141" y="3"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		266E011529AC666700901FDA /* UIViewController+Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E011429AC666700901FDA /* UIViewController+Storyboarded.swift */; };
+		266E011729AC66A000901FDA /* UICollectionViewCell+Nibbed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E011629AC66A000901FDA /* UICollectionViewCell+Nibbed.swift */; };
+		266E011929AC66C900901FDA /* UICollectionViewCell+ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E011829AC66C900901FDA /* UICollectionViewCell+ReuseIdentifiable.swift */; };
+		266E011B29AC670700901FDA /* CoinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 266E011A29AC670700901FDA /* CoinCell.xib */; };
+		266E011D29AC7FC200901FDA /* CoinHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E011C29AC7FC200901FDA /* CoinHeaderView.swift */; };
+		267C4CBB29AC8D9500A2CA1A /* UICollectionViewCell+Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C4CBA29AC8D9500A2CA1A /* UICollectionViewCell+Datasource.swift */; };
+		267C4CBD29AC8DA100A2CA1A /* UICollectionViewCell+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C4CBC29AC8DA100A2CA1A /* UICollectionViewCell+Delegate.swift */; };
+		267C4CC029AC8E7200A2CA1A /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C4CBF29AC8E7200A2CA1A /* WebSocket.swift */; };
+		26BD794129AC42FC00F705F3 /* DogeCoinFetch_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BD794029AC42FC00F705F3 /* DogeCoinFetch_iOSApp.swift */; };
+		26BD794329AC42FC00F705F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BD794229AC42FC00F705F3 /* ContentView.swift */; };
+		26BD794529AC42FE00F705F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26BD794429AC42FE00F705F3 /* Assets.xcassets */; };
+		26BD794829AC42FE00F705F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26BD794729AC42FE00F705F3 /* Preview Assets.xcassets */; };
+		26BD795029AC461500F705F3 /* PriceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BD794F29AC461500F705F3 /* PriceViewController.storyboard */; };
+		26BD795229AC462B00F705F3 /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BD795129AC462B00F705F3 /* PriceViewController.swift */; };
+		26BD795729AC623F00F705F3 /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BD795629AC623F00F705F3 /* CoinCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		266E011429AC666700901FDA /* UIViewController+Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboarded.swift"; sourceTree = "<group>"; };
+		266E011629AC66A000901FDA /* UICollectionViewCell+Nibbed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Nibbed.swift"; sourceTree = "<group>"; };
+		266E011829AC66C900901FDA /* UICollectionViewCell+ReuseIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+ReuseIdentifiable.swift"; sourceTree = "<group>"; };
+		266E011A29AC670700901FDA /* CoinCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinCell.xib; sourceTree = "<group>"; };
+		266E011C29AC7FC200901FDA /* CoinHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinHeaderView.swift; sourceTree = "<group>"; };
+		267C4CBA29AC8D9500A2CA1A /* UICollectionViewCell+Datasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Datasource.swift"; sourceTree = "<group>"; };
+		267C4CBC29AC8DA100A2CA1A /* UICollectionViewCell+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Delegate.swift"; sourceTree = "<group>"; };
+		267C4CBF29AC8E7200A2CA1A /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		26BD793D29AC42FC00F705F3 /* DogeCoinFetch-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DogeCoinFetch-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26BD794029AC42FC00F705F3 /* DogeCoinFetch_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogeCoinFetch_iOSApp.swift; sourceTree = "<group>"; };
+		26BD794229AC42FC00F705F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		26BD794429AC42FE00F705F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26BD794729AC42FE00F705F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		26BD794F29AC461500F705F3 /* PriceViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PriceViewController.storyboard; sourceTree = "<group>"; };
+		26BD795129AC462B00F705F3 /* PriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
+		26BD795629AC623F00F705F3 /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26BD793A29AC42FC00F705F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		266E011329AC664400901FDA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				266E011429AC666700901FDA /* UIViewController+Storyboarded.swift */,
+				266E011629AC66A000901FDA /* UICollectionViewCell+Nibbed.swift */,
+				266E011829AC66C900901FDA /* UICollectionViewCell+ReuseIdentifiable.swift */,
+				267C4CBA29AC8D9500A2CA1A /* UICollectionViewCell+Datasource.swift */,
+				267C4CBC29AC8DA100A2CA1A /* UICollectionViewCell+Delegate.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		267C4CBE29AC8E0300A2CA1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				267C4CBF29AC8E7200A2CA1A /* WebSocket.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26BD793429AC42FC00F705F3 = {
+			isa = PBXGroup;
+			children = (
+				26BD793F29AC42FC00F705F3 /* DogeCoinFetch-iOS */,
+				26BD793E29AC42FC00F705F3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26BD793E29AC42FC00F705F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26BD793D29AC42FC00F705F3 /* DogeCoinFetch-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26BD793F29AC42FC00F705F3 /* DogeCoinFetch-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				267C4CBE29AC8E0300A2CA1A /* Model */,
+				266E011329AC664400901FDA /* Extension */,
+				26BD794E29AC45F600F705F3 /* UIKit */,
+				26BD794029AC42FC00F705F3 /* DogeCoinFetch_iOSApp.swift */,
+				26BD794229AC42FC00F705F3 /* ContentView.swift */,
+				26BD794429AC42FE00F705F3 /* Assets.xcassets */,
+				26BD794629AC42FE00F705F3 /* Preview Content */,
+			);
+			path = "DogeCoinFetch-iOS";
+			sourceTree = "<group>";
+		};
+		26BD794629AC42FE00F705F3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				26BD794729AC42FE00F705F3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		26BD794E29AC45F600F705F3 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				26BD794F29AC461500F705F3 /* PriceViewController.storyboard */,
+				26BD795129AC462B00F705F3 /* PriceViewController.swift */,
+				26BD795629AC623F00F705F3 /* CoinCell.swift */,
+				266E011A29AC670700901FDA /* CoinCell.xib */,
+				266E011C29AC7FC200901FDA /* CoinHeaderView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26BD793C29AC42FC00F705F3 /* DogeCoinFetch-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26BD794B29AC42FE00F705F3 /* Build configuration list for PBXNativeTarget "DogeCoinFetch-iOS" */;
+			buildPhases = (
+				26BD793929AC42FC00F705F3 /* Sources */,
+				26BD793A29AC42FC00F705F3 /* Frameworks */,
+				26BD793B29AC42FC00F705F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DogeCoinFetch-iOS";
+			productName = "DogeCoinFetch-iOS";
+			productReference = 26BD793D29AC42FC00F705F3 /* DogeCoinFetch-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26BD793529AC42FC00F705F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					26BD793C29AC42FC00F705F3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 26BD793829AC42FC00F705F3 /* Build configuration list for PBXProject "DogeCoinFetch-iOS" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26BD793429AC42FC00F705F3;
+			productRefGroup = 26BD793E29AC42FC00F705F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26BD793C29AC42FC00F705F3 /* DogeCoinFetch-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26BD793B29AC42FC00F705F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26BD795029AC461500F705F3 /* PriceViewController.storyboard in Resources */,
+				26BD794829AC42FE00F705F3 /* Preview Assets.xcassets in Resources */,
+				266E011B29AC670700901FDA /* CoinCell.xib in Resources */,
+				26BD794529AC42FE00F705F3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26BD793929AC42FC00F705F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26BD794329AC42FC00F705F3 /* ContentView.swift in Sources */,
+				267C4CBD29AC8DA100A2CA1A /* UICollectionViewCell+Delegate.swift in Sources */,
+				266E011929AC66C900901FDA /* UICollectionViewCell+ReuseIdentifiable.swift in Sources */,
+				267C4CC029AC8E7200A2CA1A /* WebSocket.swift in Sources */,
+				26BD794129AC42FC00F705F3 /* DogeCoinFetch_iOSApp.swift in Sources */,
+				26BD795729AC623F00F705F3 /* CoinCell.swift in Sources */,
+				266E011D29AC7FC200901FDA /* CoinHeaderView.swift in Sources */,
+				266E011529AC666700901FDA /* UIViewController+Storyboarded.swift in Sources */,
+				266E011729AC66A000901FDA /* UICollectionViewCell+Nibbed.swift in Sources */,
+				26BD795229AC462B00F705F3 /* PriceViewController.swift in Sources */,
+				267C4CBB29AC8D9500A2CA1A /* UICollectionViewCell+Datasource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		26BD794929AC42FE00F705F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		26BD794A29AC42FE00F705F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26BD794C29AC42FE00F705F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DogeCoinFetch-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 9Y8JZ9AQG6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "bkk99091.DogeCoinFetch-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		26BD794D29AC42FE00F705F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DogeCoinFetch-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 9Y8JZ9AQG6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "bkk99091.DogeCoinFetch-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26BD793829AC42FC00F705F3 /* Build configuration list for PBXProject "DogeCoinFetch-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26BD794929AC42FE00F705F3 /* Debug */,
+				26BD794A29AC42FE00F705F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26BD794B29AC42FE00F705F3 /* Build configuration list for PBXNativeTarget "DogeCoinFetch-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26BD794C29AC42FE00F705F3 /* Debug */,
+				26BD794D29AC42FE00F705F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26BD793529AC42FC00F705F3 /* Project object */;
+}
