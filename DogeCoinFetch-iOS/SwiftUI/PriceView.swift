@@ -11,6 +11,8 @@ import SwiftUI
 struct PriceView: View {
     
     // Property
+    var websocketTask: URLSessionWebSocketTask
+    
     var dogeCoinPrice: [String: String] = ["KRW": "105.05","ETH": "0.00005050","USD": "0.08120","BTC": "0.00000350"]
     var yesterdayDogeCoinPrice: [String: String] = ["KRW": "108.10","ETH": "0.00004995","USD": "0.081","BTC": "0.00000352"]
     let buttonTintcolor = UIColor(rgb: 0x000080)
