@@ -20,10 +20,8 @@ class PriceViewController: UIViewController {
     var isConnected = false
     let server = WebSocketServer()
     let USDtoKRWCurrency: Double = 1318.60
-    var dogeCoinPrice: [String: String] = ["KRW": "105.05",
-                                           "ETH": "0.00005050",
-                                           "USD": "0.08120",
-                                           "BTC": "0.0000035"]
+    var dogeCoinPrice: [String: String] = ["KRW": "105.05","ETH": "0.00005050","USD": "0.08120","BTC": "0.00000350"]
+    var yesterdayDogeCoinPrice: [String: String] = ["KRW": "108.10","ETH": "0.00004995","USD": "0.081","BTC": "0.00000352"]
     var currencyButtonStatus = false
     
     // Life Cycle
@@ -57,13 +55,14 @@ class PriceViewController: UIViewController {
         print(socket.write(string: message))
     }
     
-    
     // IB Action
     @objc func currencyButtonOutletCollectionTapped(_ sender: UIButton) {
         currencyOutletCollection.forEach{ $0.isSelected = $0.isTouchInside ? true : false}
         coinCollectionView.reloadData()
     }
 }
+
+
 
 extension PriceViewController {
     private struct VCRepresentable: UIViewControllerRepresentable {

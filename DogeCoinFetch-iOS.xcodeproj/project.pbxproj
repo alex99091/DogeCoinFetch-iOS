@@ -18,8 +18,11 @@
 		267C4CD129ACEDF400A2CA1A /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 267C4CD029ACEDF400A2CA1A /* Starscream */; };
 		267C4CD329ACFD7A00A2CA1A /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C4CD229ACFD7A00A2CA1A /* DataResponse.swift */; };
 		267C4CD529AD04CE00A2CA1A /* PriceViewController+WebSocketDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C4CD429AD04CE00A2CA1A /* PriceViewController+WebSocketDelegate.swift */; };
+		267C4CD929AD1D0600A2CA1A /* OtherWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C4CD829AD1D0600A2CA1A /* OtherWebSocket.swift */; };
+		267C4CDB29ADA9CE00A2CA1A /* UISearchBarWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C4CDA29ADA9CE00A2CA1A /* UISearchBarWrapper.swift */; };
+		267C4CDD29ADB9FF00A2CA1A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267C4CDC29ADB9FF00A2CA1A /* UIColor.swift */; };
 		26BD794129AC42FC00F705F3 /* DogeCoinFetch_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BD794029AC42FC00F705F3 /* DogeCoinFetch_iOSApp.swift */; };
-		26BD794329AC42FC00F705F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BD794229AC42FC00F705F3 /* ContentView.swift */; };
+		26BD794329AC42FC00F705F3 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BD794229AC42FC00F705F3 /* PriceView.swift */; };
 		26BD794529AC42FE00F705F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26BD794429AC42FE00F705F3 /* Assets.xcassets */; };
 		26BD794829AC42FE00F705F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26BD794729AC42FE00F705F3 /* Preview Assets.xcassets */; };
 		26BD795029AC461500F705F3 /* PriceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BD794F29AC461500F705F3 /* PriceViewController.storyboard */; };
@@ -38,9 +41,12 @@
 		267C4CCA29ACC11800A2CA1A /* DogeCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogeCoin.swift; sourceTree = "<group>"; };
 		267C4CD229ACFD7A00A2CA1A /* DataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
 		267C4CD429AD04CE00A2CA1A /* PriceViewController+WebSocketDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PriceViewController+WebSocketDelegate.swift"; sourceTree = "<group>"; };
+		267C4CD829AD1D0600A2CA1A /* OtherWebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherWebSocket.swift; sourceTree = "<group>"; };
+		267C4CDA29ADA9CE00A2CA1A /* UISearchBarWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBarWrapper.swift; sourceTree = "<group>"; };
+		267C4CDC29ADB9FF00A2CA1A /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		26BD793D29AC42FC00F705F3 /* DogeCoinFetch-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DogeCoinFetch-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BD794029AC42FC00F705F3 /* DogeCoinFetch_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogeCoinFetch_iOSApp.swift; sourceTree = "<group>"; };
-		26BD794229AC42FC00F705F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		26BD794229AC42FC00F705F3 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		26BD794429AC42FE00F705F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26BD794729AC42FE00F705F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		26BD794F29AC461500F705F3 /* PriceViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PriceViewController.storyboard; sourceTree = "<group>"; };
@@ -69,6 +75,7 @@
 				267C4CBA29AC8D9500A2CA1A /* CoinCollectionView+Datasource.swift */,
 				267C4CBC29AC8DA100A2CA1A /* CoinCollectionView+Delegate.swift */,
 				267C4CD429AD04CE00A2CA1A /* PriceViewController+WebSocketDelegate.swift */,
+				267C4CDC29ADB9FF00A2CA1A /* UIColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -78,8 +85,27 @@
 			children = (
 				267C4CCA29ACC11800A2CA1A /* DogeCoin.swift */,
 				267C4CD229ACFD7A00A2CA1A /* DataResponse.swift */,
+				267C4CD829AD1D0600A2CA1A /* OtherWebSocket.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		267C4CD629AD1ABC00A2CA1A /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				26BD794229AC42FC00F705F3 /* PriceView.swift */,
+				267C4CDA29ADA9CE00A2CA1A /* UISearchBarWrapper.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		267C4CD729AD1AE200A2CA1A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				26BD794029AC42FC00F705F3 /* DogeCoinFetch_iOSApp.swift */,
+				26BD794429AC42FE00F705F3 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		26BD793429AC42FC00F705F3 = {
@@ -101,12 +127,11 @@
 		26BD793F29AC42FC00F705F3 /* DogeCoinFetch-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				267C4CD729AD1AE200A2CA1A /* Supporting Files */,
+				267C4CD629AD1ABC00A2CA1A /* SwiftUI */,
 				267C4CBE29AC8E0300A2CA1A /* Model */,
 				266E011329AC664400901FDA /* Extension */,
 				26BD794E29AC45F600F705F3 /* UIKit */,
-				26BD794029AC42FC00F705F3 /* DogeCoinFetch_iOSApp.swift */,
-				26BD794229AC42FC00F705F3 /* ContentView.swift */,
-				26BD794429AC42FE00F705F3 /* Assets.xcassets */,
 				26BD794629AC42FE00F705F3 /* Preview Content */,
 			);
 			path = "DogeCoinFetch-iOS";
@@ -210,19 +235,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26BD794329AC42FC00F705F3 /* ContentView.swift in Sources */,
+				26BD794329AC42FC00F705F3 /* PriceView.swift in Sources */,
 				267C4CCB29ACC11800A2CA1A /* DogeCoin.swift in Sources */,
 				267C4CBD29AC8DA100A2CA1A /* CoinCollectionView+Delegate.swift in Sources */,
 				266E011929AC66C900901FDA /* UICollectionViewCell+ReuseIdentifiable.swift in Sources */,
 				26BD794129AC42FC00F705F3 /* DogeCoinFetch_iOSApp.swift in Sources */,
+				267C4CDD29ADB9FF00A2CA1A /* UIColor.swift in Sources */,
 				26BD795729AC623F00F705F3 /* CoinCell.swift in Sources */,
 				266E011D29AC7FC200901FDA /* CoinHeaderView.swift in Sources */,
 				267C4CD529AD04CE00A2CA1A /* PriceViewController+WebSocketDelegate.swift in Sources */,
 				266E011529AC666700901FDA /* UIViewController+Storyboarded.swift in Sources */,
 				266E011729AC66A000901FDA /* UICollectionViewCell+Nibbed.swift in Sources */,
+				267C4CDB29ADA9CE00A2CA1A /* UISearchBarWrapper.swift in Sources */,
 				26BD795229AC462B00F705F3 /* PriceViewController.swift in Sources */,
 				267C4CD329ACFD7A00A2CA1A /* DataResponse.swift in Sources */,
 				267C4CBB29AC8D9500A2CA1A /* CoinCollectionView+Datasource.swift in Sources */,
+				267C4CD929AD1D0600A2CA1A /* OtherWebSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

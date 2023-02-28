@@ -37,6 +37,16 @@ extension PriceViewController: UICollectionViewDataSource {
         case "USD": cell.coinPriceLabel.text = String(format: "%.6f", priceDouble)
         default: print("nothing isSelected")
         }
+        let lastDogeCoinPrice = Double(yesterdayDogeCoinPrice[currentButtonTitle]!)!
+        var change = (priceDouble/lastDogeCoinPrice - 1.0) * 100
+        if change < 0 {
+            change = abs(change) * -1
+            cell.coinChangeLabel.tintColor = .red
+        } else {
+            cell.coinChangeLabel.tintColor = .blue
+        }
+        cell.coinChangeLabel.text = String(format: "%.2f ", change) + "%"
+        
         
         return cell
     }
