@@ -22,7 +22,7 @@
 
 &nbsp; 이 샘플 앱은 [도지코인 웹소켓 API](https://dogechain.info/api/websocket)를 사용하여 도지코인의 `실시간 가격`을 볼 수 있는 `앱`입니다.
 
-프로젝트는 `UIKit` / `SwiftUI` 코드 구현, `Starscream` Libary를 활용한 WebSocket Fetch, `NewWebSocket 구현`을 통한 Fetch등을 포함하고 있습니다.
+프로젝트는 `UIKit` / `SwiftUI` 코드 구현, `Starscream Libary`를 활용한 WebSocket Fetch, `NewWebSocket 구현`을 통한 Fetch등을 포함하고 있습니다.
 
 
 
