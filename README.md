@@ -9,9 +9,9 @@
 ### Contents
 
 - [App Apperance](https://github.com/alex99091/DogeCoinFetch-iOS#app-apperance)
-- [웹소켓 이란?](https://github.com/alex99091/DogeCoinFetch-iOS#app-apperance)
-- [StarScream 라이브러리](https://github.com/alex99091/DogeCoinFetch-iOS#app-apperance)
-- [WebSocket 구현](https://github.com/alex99091/DogeCoinFetch-iOS#app-apperance)
+- [웹소켓 이란?](https://github.com/alex99091/DogeCoinFetch-iOS#웹소켓-이란??)
+- [StarScream 라이브러리](https://github.com/alex99091/DogeCoinFetch-iOS#StarScream-라이브러리)
+- [WebSocket 구현](https://github.com/alex99091/DogeCoinFetch-iOS#NewWebSocket-구현)
 
 
 ## App Apperance
@@ -26,7 +26,7 @@
 
 
 
-### 웹소켓 이란?
+### 웹소켓 이란??
 
 &nbsp;WebSocket은 클라이언트와 서버 간에 `실시간 양방향` 데이터 전송을 가능하게 하는 `통신 프로토콜`입니다.
 클라이언트와 서버 간에 `최초 연결 요청`을 보낸 후에, 이후에는 계속해서 연결을 유지합니다. 
@@ -50,7 +50,7 @@ var delegate: URLSessionDelegate? { get }
 
 
 
-### StarScream 라이브러리 
+### StarScream 라이브러리
 
 &nbsp;`Starscream`은 `Swift` 프로그래밍 언어로 오픈 소스 `WebSocket 클라이언트 라이브러리`입니다. WebSocket 연결 설정, 메시지 전송 및 수신, 연결 해제 및 오류 처리와 같은 이벤트 처리를 위한 간단하고 쉬운 API를 제공하며 및 다양한 WebSocket 사양을 지원합니다.
 
@@ -112,7 +112,7 @@ string 형태의 응답을 받을 경우에 해당 string을 jsonDecoder를 사�
 
 해당 값을 콜렉션뷰의 데이터소스에 갱신한 후 데이터를 리로드하는 방식을 사용했습니다.
 
-### NewWebSocket 구현 
+### NewWebSocket 구현
 
 - URLSession을 통한 웹소켓 커넥션 생성 
 - 웹소켓 연결 
