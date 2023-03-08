@@ -70,7 +70,7 @@ struct PriceView: View {
                 let change = (priceDouble / Double(yesterdayDogeCoinPrice["KRW"]!)! - 1) * 100
                 Button(action: {
                     selectedButton = "KRW"
-                    coinPriceLabel.updateValue("DOGE/KRW", forKey: "KRW")
+                    coinPriceLabel.updateValue("DOGE/KRW", forKey: "NAME")
                     coinPriceLabel.updateValue(String(format: "%.2f", priceDouble), forKey: "PRICE")
                     coinPriceLabel.updateValue(String(format: "%.2f ", change) + "%", forKey: "CHANGE")
                 }, label: {
@@ -86,7 +86,7 @@ struct PriceView: View {
                     selectedButton = "BTC"
                     let priceDouble = Double(currentDogeCoinPrice["BTC"]!)!
                     let change = (priceDouble / Double(yesterdayDogeCoinPrice["BTC"]!)! - 1) * 100
-                    coinPriceLabel.updateValue("DOGE/BTC", forKey: "BTC")
+                    coinPriceLabel.updateValue("DOGE/BTC", forKey: "NAME")
                     coinPriceLabel.updateValue(String(format: "%.8f", priceDouble), forKey: "PRICE")
                     coinPriceLabel.updateValue(String(format: "%.2f ", change) + "%", forKey: "CHANGE")
                 }, label: {
@@ -102,7 +102,7 @@ struct PriceView: View {
                     selectedButton = "USD"
                     let priceDouble = Double(currentDogeCoinPrice["USD"]!)!
                     let change = (priceDouble / Double(yesterdayDogeCoinPrice["USD"]!)! - 1) * 100
-                    coinPriceLabel.updateValue("DOGE/USD", forKey: "USD")
+                    coinPriceLabel.updateValue("DOGE/USD", forKey: "NAME")
                     coinPriceLabel.updateValue(String(format: "%.6f", priceDouble), forKey: "PRICE")
                     coinPriceLabel.updateValue(String(format: "%.2f ", change) + "%", forKey: "CHANGE")
                 }, label: {
@@ -118,7 +118,7 @@ struct PriceView: View {
                     selectedButton = "ETH"
                     let priceDouble = Double(currentDogeCoinPrice["ETH"]!)!
                     let change = (priceDouble / Double(yesterdayDogeCoinPrice["ETH"]!)! - 1) * 100
-                    coinPriceLabel.updateValue("DOGE/ETH", forKey: "ETH")
+                    coinPriceLabel.updateValue("DOGE/ETH", forKey: "NAME")
                     coinPriceLabel.updateValue(String(format: "%.8f", priceDouble), forKey: "PRICE")
                     coinPriceLabel.updateValue(String(format: "%.2f ", change) + "%", forKey: "CHANGE")
                 }, label: {
