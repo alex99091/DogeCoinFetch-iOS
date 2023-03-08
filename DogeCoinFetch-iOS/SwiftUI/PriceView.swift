@@ -11,10 +11,13 @@ import SwiftUI
 struct PriceView: View {
     
     // Property
-    var websocketTask: URLSessionWebSocketTask
+    @StateObject var priceViewModel = PriceViewModel()
+    //var priceViewModel = PriceViewModel()
+    @State var currentDogeCoinPrice: [String: String] = ["KRW": "108.10","ETH": "0.00004995","USD": "0.081","BTC": "0.00000352"]
+    let yesterdayDogeCoinPrice: [String: String] = ["KRW": "109.10","ETH": "0.00005120","USD": "0.083","BTC": "0.00000362"]
+    @State var coinPriceLabel: [String: String] = ["NAME": "", "PRICE": "", "CHANGE": ""]
+    @State private var selectedButton: String? = "KRW"
     
-    var dogeCoinPrice: [String: String] = ["KRW": "105.05","ETH": "0.00005050","USD": "0.08120","BTC": "0.00000350"]
-    var yesterdayDogeCoinPrice: [String: String] = ["KRW": "108.10","ETH": "0.00004995","USD": "0.081","BTC": "0.00000352"]
     let buttonTintcolor = UIColor(rgb: 0x000080)
     
     var body: some View {
@@ -28,7 +31,7 @@ struct PriceView: View {
                 searchBarView()
                     .frame(width: maxWidth - (leadingSpacing-trailingSpacing)*2, height: 25, alignment: .leading)
                     .padding(EdgeInsets(top:0, leading: leadingSpacing*2, bottom: 0, trailing: trailingSpacing*2))
-                buttonMenuView
+                buttonMenusView
                     .frame(width: maxWidth - (leadingSpacing-trailingSpacing)*2, height: 60, alignment: .leading)
                     .padding(EdgeInsets(top:0, leading: leadingSpacing*2, bottom: 0, trailing: trailingSpacing*2))
                 coinLabelView
@@ -36,6 +39,10 @@ struct PriceView: View {
                     .padding(EdgeInsets(top:0, leading: leadingSpacing*2, bottom: 0, trailing: trailingSpacing*2))
                 Spacer()
             }
+        }
+        .onReceive(priceViewModel.$dogeCoinPrice) { dogeCoinPrice in
+            currentDogeCoinPrice = dogeCoinPrice
+            print("currentDogeCoinPrice: \(currentDogeCoinPrice)")
         }
     }
     
@@ -55,19 +62,73 @@ struct PriceView: View {
         return searchBar
     }
     
-    // ButtonMenuView
-    var buttonMenuView: some View {
+    var buttonMenusView: some View {
         VStack{
             Spacer()
             HStack(spacing: 15){
-                Button(action: { }, label: { Text("KRW").font(.system(size: 18)).foregroundColor(Color.init(uiColor: buttonTintcolor))})
-                    .frame(alignment: .leading)
-                Button(action: { }, label: { Text("BTC").font(.system(size: 18)).foregroundColor(Color.init(uiColor: buttonTintcolor))})
-                    .frame(alignment: .leading)
-                Button(action: { }, label: { Text("USD").font(.system(size: 18)).foregroundColor(Color.init(uiColor: buttonTintcolor))})
-                    .frame(alignment: .leading)
-                Button(action: { }, label: { Text("ETH").font(.system(size: 18)).foregroundColor(Color.init(uiColor: buttonTintcolor))})
-                    .frame(alignment: .leading)
+                let priceDouble = Double(currentDogeCoinPrice["KRW"]!)!
+                let change = (priceDouble / Double(yesterdayDogeCoinPrice["KRW"]!)! - 1) * 100
+                Button(action: {
+                    selectedButton = "KRW"
+                    coinPriceLabel.updateValue("DOGE/KRW", forKey: "KRW")
+                    coinPriceLabel.updateValue(String(format: "%.2f", priceDouble), forKey: "PRICE")
+                    coinPriceLabel.updateValue(String(format: "%.2f ", change) + "%", forKey: "CHANGE")
+                }, label: {
+                    Text("KRW")
+                        .font(.system(size: 18))
+                        .foregroundColor(selectedButton == "KRW" ? .white : Color.init(uiColor: buttonTintcolor))
+                })
+                .frame(alignment: .leading)
+                .background(selectedButton == "KRW" ? Color.blue : Color.clear)
+                .cornerRadius(5)
+                
+                Button(action: {
+                    selectedButton = "BTC"
+                    let priceDouble = Double(currentDogeCoinPrice["BTC"]!)!
+                    let change = (priceDouble / Double(yesterdayDogeCoinPrice["BTC"]!)! - 1) * 100
+                    coinPriceLabel.updateValue("DOGE/BTC", forKey: "BTC")
+                    coinPriceLabel.updateValue(String(format: "%.8f", priceDouble), forKey: "PRICE")
+                    coinPriceLabel.updateValue(String(format: "%.2f ", change) + "%", forKey: "CHANGE")
+                }, label: {
+                    Text("BTC")
+                        .font(.system(size: 18))
+                        .foregroundColor(selectedButton == "BTC" ? .white : Color.init(uiColor: buttonTintcolor))
+                })
+                .frame(alignment: .leading)
+                .background(selectedButton == "BTC" ? Color.blue : Color.clear)
+                .cornerRadius(5)
+                
+                Button(action: {
+                    selectedButton = "USD"
+                    let priceDouble = Double(currentDogeCoinPrice["USD"]!)!
+                    let change = (priceDouble / Double(yesterdayDogeCoinPrice["USD"]!)! - 1) * 100
+                    coinPriceLabel.updateValue("DOGE/USD", forKey: "USD")
+                    coinPriceLabel.updateValue(String(format: "%.6f", priceDouble), forKey: "PRICE")
+                    coinPriceLabel.updateValue(String(format: "%.2f ", change) + "%", forKey: "CHANGE")
+                }, label: {
+                    Text("USD")
+                        .font(.system(size: 18))
+                        .foregroundColor(selectedButton == "USD" ? .white : Color.init(uiColor: buttonTintcolor))
+                })
+                .frame(alignment: .leading)
+                .background(selectedButton == "USD" ? Color.blue : Color.clear)
+                .cornerRadius(5)
+                
+                Button(action: {
+                    selectedButton = "ETH"
+                    let priceDouble = Double(currentDogeCoinPrice["ETH"]!)!
+                    let change = (priceDouble / Double(yesterdayDogeCoinPrice["ETH"]!)! - 1) * 100
+                    coinPriceLabel.updateValue("DOGE/ETH", forKey: "ETH")
+                    coinPriceLabel.updateValue(String(format: "%.8f", priceDouble), forKey: "PRICE")
+                    coinPriceLabel.updateValue(String(format: "%.2f ", change) + "%", forKey: "CHANGE")
+                }, label: {
+                    Text("ETH")
+                        .font(.system(size: 18))
+                        .foregroundColor(selectedButton == "ETH" ? .white : Color.init(uiColor: buttonTintcolor))
+                })
+                .frame(alignment: .leading)
+                .background(selectedButton == "ETH" ? Color.blue : Color.clear)
+                .cornerRadius(5)
             }
             Spacer()
         }
@@ -89,18 +150,18 @@ struct PriceView: View {
             HStack {
                 VStack {
                     Spacer()
-                    Text("도지").font(.system(size: 14))
+                    Text("도지").font(.system(size: 15))
                         .foregroundColor(Color.blue)
                         .frame(width: 110, height: 10, alignment: .leading)
-                    Text("DOGE/KRW").font(.system(size: 8))
+                    Text(coinPriceLabel["NAME"]!).font(.system(size: 8))
                         .foregroundColor(Color.blue)
                         .frame(width: 110, height: 10, alignment: .leading)
                     Spacer()
                 }
-                Text("105.05")
+                Text(coinPriceLabel["PRICE"]!)
                     .font(.system(size: 14)).foregroundColor(Color.red)
                     .frame(width: 110, height: 15, alignment: .center)
-                Text("-2.78%")
+                Text(coinPriceLabel["CHANGE"]!)
                     .font(.system(size: 14)).foregroundColor(Color.red)
                     .frame(width: 110, height: 15, alignment: .center)
             }
